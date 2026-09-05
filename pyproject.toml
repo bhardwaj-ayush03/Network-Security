@@ -19,3 +19,5 @@ dependencies = [
     "setuptools>=84.0.0",
     "uvicorn>=0.52.4",
 ]
+[tool.setuptools.packages.find]
+include = ["networksecurity*"]

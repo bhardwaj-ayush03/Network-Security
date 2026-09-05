@@ -5,7 +5,7 @@ pymongo
 certifi
 
 scikit-learn
-mlflow
+mlflow>=3.15.2
 pyaml
 dagshub
 fastapi
