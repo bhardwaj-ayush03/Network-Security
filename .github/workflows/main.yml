@@ -104,8 +104,8 @@ jobs:
 
       - name: Stop and remove existing container
         run: |
-          docker ps -q --filter "name=networksecurity" | grep -q . && docker stop networksecurity && docker rm -fv networksecurity || true
-
+          docker stop networksecurity 2>/dev/null || true
+          docker rm -fv networksecurity 2>/dev/null || true
       - name: Run Docker Image to serve users
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
