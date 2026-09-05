@@ -27,6 +27,7 @@ import mlflow
 from urllib.parse import urlparse
 
 import dagshub
+dagshub.auth.add_app_token(os.environ["DAGSHUB_TOKEN"])
 dagshub.init(repo_owner='ayushbh48', repo_name='Network-Security', mlflow=True)
 
 
